@@ -1,0 +1,104 @@
+// General Includes
+#include "config\uiControls.hpp"
+#include "\a3\3DEN\UI\macros.inc"
+#include "\a3\3DEN\UI\macroexecs.inc"
+#include "\a3\ui_f\hpp\definedikcodes.inc"
+#include "\a3\ui_f\hpp\definecommoncolors.inc"
+#include "\a3\ui_f\hpp\definecommongrids.inc"
+#include "\a3\ui_f\hpp\defineresincl.inc"
+
+// Pre Mission
+
+author = "Hypoxic";
+onLoadName = "Carrier Strike Malden";
+onLoadMission = "Destroy the enemy carrier by capturing silos or destroying the reactor core";
+//loadingScreen = "img path";
+
+class Header
+{
+	gameType = SC;
+	minPlayers = 2;
+	maxPlayers = 48;
+};
+
+//onLoadIntro = "img path";
+onLoadMissionTime = 1;
+onLoadIntroTime = 1;
+briefingName = "Destroy the enemy carrier by capturing silos or destroying the reactor core";
+
+//overviewPicture = "2:1 1024x512";
+overviewText = "Destroy the enemy carrier by capturing silos or destroying the reactor core";
+overviewTextLocked = "Destroy the enemy carrier by capturing silos or destroying the reactor core";
+
+// Respawn System
+
+respawn = "BASE";
+respawnButton = 1;
+respawnDelay = 15;
+respawnDialog = 1;
+respawnOnStart = 1;
+
+respawnTemplates[] = { "MenuPosition", "MenuInventory" };
+
+// Revive System
+
+reviveMode = 1;
+reviveUnconsciousStateMode = 0;
+reviveRequiredTrait = 1;
+reviveRequiredItems = 1;
+reviveRequiredItemsFakConsumed = 0;
+reviveMedicSpeedMultiplier = 2;
+reviveDelay = 20;
+reviveForceRespawnDelay = 3;
+reviveBleedOutDelay = 300;
+
+// Other
+
+allowProfileGlasses = 0;
+disabledAI = 1;
+enableTeamSwitch = 0;
+joinUnassigned = 0;
+saving = 0;
+
+// Configs
+
+class CfgRespawnInventory
+{
+	#include "config\loadouts.hpp"
+};
+
+class CfgRoles
+{
+	#include "config\roles.hpp"
+};
+
+class CfgFunctions
+{
+	#include "config\functions.hpp"
+};
+
+class CfgDebriefing
+{
+	#include "config\debriefing.hpp"
+};
+
+class RscTitles
+{
+	#include "config\hud.hpp"
+};
+
+class Params
+{
+	#include "\a3\Functions_F_MP_Mark\Params\paramTimeAcceleration.hpp"
+	#include "\a3\Functions_F_Heli\Params\paramViewDistance.hpp"
+	#include "param\paramSiloCycleTime.hpp"
+	#include "param\paramMissileValue.hpp"
+	#include "param\paramRespawnTime.hpp"
+	#include "param\paramVehicleSpawnTime.hpp"
+	#include "\a3\Functions_F\Params\paramRevive.hpp"
+};
+
+class CfgHints
+{
+	#include "config\hints.hpp"
+};
