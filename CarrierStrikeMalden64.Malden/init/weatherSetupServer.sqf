@@ -17,4 +17,10 @@ setWind [random 360, random 360, false];
 0 setWindForce random 1;
 0 setWindStr random 1;
 
+//Skip Time
+
+private _date = date;
+skipTime 24;
+setDate _date;
+
 diag_log "weatherSetupServer.sqf success";
